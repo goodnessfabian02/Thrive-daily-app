@@ -459,3 +459,16 @@ p { margin: 0; line-height: 1.5; }
 .onboarding button {
   margin-top: 10px;
 }
+
+.error-text {
+  /* existing code here */
+}
+
+
+/* Onboarding image */
+.onboarding-icon img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 20px;
+}
