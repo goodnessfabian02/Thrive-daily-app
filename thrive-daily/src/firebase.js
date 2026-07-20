@@ -33,12 +33,14 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 // credentials (Project settings -> General -> Your apps -> SDK setup).
 // Project used elsewhere in this codebase: thrive-daily-555b1
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'thrive-daily-555b1.firebaseapp.com',
-  projectId: 'thrive-daily-555b1',
-  storageBucket: 'thrive-daily-555b1.appspot.com',
-  messagingSenderId: 'YOUR_SENDER_ID',
-  appId: 'YOUR_APP_ID'
+  apiKey: "AIzaSyCem-X79HQlBG8iZAFFe6bUOyf2WT4VC-4",
+  authDomain: "thrive-daily-8b15d.firebaseapp.com",
+  projectId: "thrive-daily-8b15d",
+  storageBucket: "thrive-daily-8b15d.firebasestorage.app",
+  messagingSenderId: "135942244159",
+  appId: "1:135942244159:web:262caf39ace3c7f5d0358a",
+  measurementId: "G-GZWFSWYTTH"
+};
 }
 
 const app = initializeApp(firebaseConfig)
