@@ -60,7 +60,6 @@ function StartRoute() {
     </RequireAuth>
   )
 }
-
 function AppRoutes() {
   return (
     <Routes>
