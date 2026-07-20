@@ -460,11 +460,6 @@ p { margin: 0; line-height: 1.5; }
   margin-top: 10px;
 }
 
-.error-text {
-  /* existing code here */
-}
-
-
 /* Onboarding image */
 .onboarding-icon img {
   width: 90px;
