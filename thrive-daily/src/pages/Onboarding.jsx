@@ -124,16 +124,3 @@ export default function Onboarding() {
       </div>
     </div>
   )
-}
-.error-text {
-  /* existing code here */
-}
-
-
-/* Onboarding image */
-.onboarding-icon img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  border-radius: 20px;
-}
