@@ -107,8 +107,10 @@ export default function Onboarding() {
         ) : (
           <button
             className="btn-primary"
-            onClick={() => navigate('/register')}
-          >
+            onClick={() => {
+  localStorage.setItem("thriveOnboarding", "true")
+  navigate('/register')
+}}
             Get Started
           </button>
         )}
