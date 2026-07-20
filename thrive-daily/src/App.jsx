@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { AuthProvider, useAuth } from './context/AuthContext.jsx'
 import Loading from './components/Loading.jsx'
@@ -37,6 +38,28 @@ function AppLayout({ children }) {
     </div>
   )
 }
+function StartRoute() {
+  const [seen, setSeen] = useState(null)
+
+  useEffect(() => {
+    const completed = localStorage.getItem("thriveOnboarding")
+    setSeen(completed)
+  }, [])
+
+  if (seen === null) return <Loading />
+
+  if (!seen) {
+    return <Onboarding />
+  }
+
+  return (
+    <RequireAuth>
+      <AppLayout>
+        <Home />
+      </AppLayout>
+    </RequireAuth>
+  )
+}
 
 function AppRoutes() {
   return (
@@ -45,13 +68,7 @@ function AppRoutes() {
       <Route path="/login" element={<RedirectIfAuthed><Login /></RedirectIfAuthed>} />
       <Route path="/register" element={<RedirectIfAuthed><Register /></RedirectIfAuthed>} />
 
-     <Route path="/" element={
-  <RequireAuth>
-    <AppLayout>
-      <Home />
-    </AppLayout>
-  </RequireAuth>
-} />
+     <Route path="/" element={<StartRoute />} />
       <Route path="/home" element={<RequireAuth><AppLayout><Home /></AppLayout></RequireAuth>} />
       <Route path="/mood" element={<RequireAuth><div className="app-shell"><Mood /></div></RequireAuth>} />
       <Route path="/lessons" element={<RequireAuth><AppLayout><Lessons /></AppLayout></RequireAuth>} />
