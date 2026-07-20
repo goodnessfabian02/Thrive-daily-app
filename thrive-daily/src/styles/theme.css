@@ -373,3 +373,89 @@ p { margin: 0; line-height: 1.5; }
   font-size: 13px;
   margin-bottom: 10px;
 }
+/* Onboarding */
+
+.onboarding {
+  min-height: 100vh;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.onboarding-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.onboarding-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: var(--color-green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.onboarding h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.onboarding p {
+  color: var(--color-text-soft);
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.onboarding-features {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.onboarding-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.onboarding-feature:last-child {
+  margin-bottom: 0;
+}
+
+.onboarding-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.onboarding-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.onboarding-dot.active {
+  width: 28px;
+  border-radius: 20px;
+  background: var(--color-green);
+}
+
+.onboarding button {
+  margin-top: 10px;
+}
