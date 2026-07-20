@@ -39,14 +39,14 @@ function AppLayout({ children }) {
   )
 }
 function StartRoute() {
-  const [seen, setSeen] = useState(null)
+  const [seen, setSeen] = useState(true)
 
   useEffect(() => {
     const completed = localStorage.getItem("thriveOnboarding")
-    setSeen(completed)
+    if (!completed) {
+      setSeen(false)
+    }
   }, [])
-
-  if (seen === null) return null
 
   if (!seen) {
     return <Onboarding />
