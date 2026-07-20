@@ -42,6 +42,7 @@ function AppLayout({ children }) {
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/onboarding" element={<Onboarding />} />
       <Route path="/login" element={<RedirectIfAuthed><Login /></RedirectIfAuthed>} />
       <Route path="/register" element={<RedirectIfAuthed><Register /></RedirectIfAuthed>} />
 
