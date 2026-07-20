@@ -459,11 +459,17 @@ p { margin: 0; line-height: 1.5; }
 .onboarding button {
   margin-top: 10px;
 }
-
-/* Onboarding image */
-.onboarding-icon img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  border-radius: 20px;
+.onboarding-icon {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 30px;
+  background: transparent;
 }
+
+.onboarding-icon img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  border-radius: 28px;
+}
+
