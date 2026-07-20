@@ -1,3 +1,4 @@
+import thriveLogo from '../assets/IMG_4137.jpeg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -30,8 +31,8 @@ export default function Onboarding() {
       <div className="onboarding-card">
 
         <div className="onboarding-icon">
-          {current.icon}
-        </div>
+  <img src={thriveLogo} alt="Thrive Daily" />
+</div>
 
         <h1>{current.title}</h1>
 
@@ -123,4 +124,16 @@ export default function Onboarding() {
       </div>
     </div>
   )
+}
+.error-text {
+  /* existing code here */
+}
+
+
+/* Onboarding image */
+.onboarding-icon img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 20px;
 }
