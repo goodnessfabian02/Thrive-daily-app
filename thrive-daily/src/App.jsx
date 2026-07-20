@@ -13,6 +13,7 @@ import Goals from './pages/Goals.jsx'
 import Exercises from './pages/Exercises.jsx'
 import Insights from './pages/Insights.jsx'
 import Profile from './pages/Profile.jsx'
+import Onboarding from './pages/Onboarding.jsx'
 
 function RequireAuth({ children }) {
   const { user, loading } = useAuth()
