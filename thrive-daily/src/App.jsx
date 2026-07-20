@@ -26,10 +26,9 @@ function RequireAuth({ children }) {
 function RedirectIfAuthed({ children }) {
   const { user, loading } = useAuth()
   if (loading) return <Loading />
-  if (user) return <Navigate to="/" replace />
+  if (user) return <Navigate to="/home" replace />
   return children
 }
-
 function AppLayout({ children }) {
   return (
     <div className="app-shell">
@@ -46,7 +45,8 @@ function AppRoutes() {
       <Route path="/login" element={<RedirectIfAuthed><Login /></RedirectIfAuthed>} />
       <Route path="/register" element={<RedirectIfAuthed><Register /></RedirectIfAuthed>} />
 
-      <Route path="/" element={<RequireAuth><AppLayout><Home /></AppLayout></RequireAuth>} />
+     <Route path="/" element={<Navigate to="/onboarding" replace />} />
+      <Route path="/home" element={<RequireAuth><AppLayout><Home /></AppLayout></RequireAuth>} />
       <Route path="/mood" element={<RequireAuth><div className="app-shell"><Mood /></div></RequireAuth>} />
       <Route path="/lessons" element={<RequireAuth><AppLayout><Lessons /></AppLayout></RequireAuth>} />
       <Route path="/journal" element={<RequireAuth><AppLayout><Journal /></AppLayout></RequireAuth>} />
