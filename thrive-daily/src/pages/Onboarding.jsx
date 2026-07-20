@@ -98,23 +98,23 @@ export default function Onboarding() {
 
 
         {page < 2 ? (
-          <button
-            className="btn-primary"
-            onClick={() => setPage(page + 1)}
-          >
-            Next
-          </button>
-        ) : (
-          <button
-            className="btn-primary"
-            onClick={() => {
-  localStorage.setItem("thriveOnboarding", "true")
-  navigate('/register')
-}}
-            Get Started
-          </button>
-        )}
-
+  <button
+    className="btn-primary"
+    onClick={() => setPage(page + 1)}
+  >
+    Next
+  </button>
+) : (
+  <button
+    className="btn-primary"
+    onClick={() => {
+      localStorage.setItem("thriveOnboarding", "true")
+      navigate('/register')
+    }}
+  >
+    Get Started
+  </button>
+)}
 
         <button
           className="btn-secondary"
