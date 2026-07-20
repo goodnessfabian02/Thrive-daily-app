@@ -46,7 +46,7 @@ function StartRoute() {
     setSeen(completed)
   }, [])
 
-  if (seen === null) return <Loading />
+  if (seen === null) return null
 
   if (!seen) {
     return <Onboarding />
