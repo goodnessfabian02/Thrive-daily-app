@@ -69,7 +69,8 @@ function AppRoutes() {
       <Route path="/login" element={<RedirectIfAuthed><Login /></RedirectIfAuthed>} />
       <Route path="/register" element={<RedirectIfAuthed><Register /></RedirectIfAuthed>} />
 
-     <Route path="/" element={<StartRoute />} />
+     <Route path="/" element={<Navigate to="/splash" replace />} />
+<Route path="/start" element={<StartRoute />} />
       <Route path="/home" element={<RequireAuth><AppLayout><Home /></AppLayout></RequireAuth>} />
       <Route path="/mood" element={<RequireAuth><div className="app-shell"><Mood /></div></RequireAuth>} />
       <Route path="/lessons" element={<RequireAuth><AppLayout><Lessons /></AppLayout></RequireAuth>} />
