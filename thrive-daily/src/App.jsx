@@ -65,6 +65,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/splash" element={<Splash />} />
+<Route path="/start" element={<StartRoute />} />
       <Route path="/onboarding" element={<Onboarding />} />
       <Route path="/login" element={<RedirectIfAuthed><Login /></RedirectIfAuthed>} />
       <Route path="/register" element={<RedirectIfAuthed><Register /></RedirectIfAuthed>} />
