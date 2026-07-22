@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { hapticImpact } from '../telegram.js'
 
 const TABS = [
-  { to: '/', icon: '🏡', label: 'Home', end: true },
+  { to: '/home', icon: '🏡', label: 'Home' },
   { to: '/lessons', icon: '📚', label: 'Lessons' },
   { to: '/journal', icon: '📝', label: 'Journal' },
   { to: '/exercises', icon: '🧘', label: 'Exercises' },
